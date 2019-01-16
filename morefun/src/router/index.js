@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import HelloWorld from '@/components/HelloWorld'
+import Main from '@/components/Main'
 import Dog from '@/components/Dog'
 import Cat from '@/components/Cat'
 import News from '@/components/News'
@@ -16,24 +17,27 @@ export default new Router({
       component: HelloWorld
     },
     {
-      path: '/dog',
-      name: 'Dog',
-      component: Dog
-    },
-    {
-      path: '/cat',
-      name: 'Cat',
-      component: Cat
-    },
-    {
-      path: '/jokes',
-      name: 'Jokes',
-      component: Jokes
-    },
-    {
-      path: '/news',
-      name: 'News',
-      component: News
-    },
+      path: '/main/',
+      component: Main,
+      children:[
+        {
+          // https://router.vuejs.org/guide/essentials/nested-routes.html
+          path: 'dog',
+          component: Dog
+        },
+        {
+          path: 'cat',
+          component: Cat
+        },
+        {
+          path: 'jokes',
+          component: Jokes
+        },
+        {
+          path: 'news',
+          component: News
+        },
+      ]
+    }
   ]
 })

@@ -2,35 +2,35 @@
 <div style="width:100%">
     <div class="mobile-sidebar dropdown">
         <button class="btn btn-secondary " type="button" id="dropdownMenuButton" data-toggle="dropdown">
-            &#9776;
+            Select your favorite &#9660;
         </button>
         <div class="dropdown-menu">
-            <router-link to="/dog" tag="li" class="dropdown-item side-nav-item">
+            <router-link to="/main/dog" tag="li" class="dropdown-item side-nav-item">
                 Dog
             </router-link> 
-            <router-link to="/cat" tag="li" class="dropdown-item side-nav-item">
+            <router-link to="/main/cat" tag="li" class="dropdown-item side-nav-item">
                 Cat
             </router-link> 
-            <router-link to="/jokes" tag="li" class="dropdown-item side-nav-item">
+            <router-link to="/main/jokes" tag="li" class="dropdown-item side-nav-item">
                 Jokes
             </router-link> 
-            <router-link to="/news" tag="li" class="dropdown-item side-nav-item">
+            <router-link to="/main/news" tag="li" class="dropdown-item side-nav-item">
                 News
             </router-link> 
         </div>
     </div>
     <div class="side-nav">
         <ul>
-            <router-link to="/dog" tag='li' class="side-nav-item">
+            <router-link to="/main/dog" tag='li' class="side-nav-item">
                 <p>Dog</p>
             </router-link> 
-            <router-link to="/cat" tag="li" class="side-nav-item">
+            <router-link to="/main/cat" tag="li" class="side-nav-item">
                 <p>Cat</p>
             </router-link> 
-            <router-link to="/jokes" tag="li" class="side-nav-item">
+            <router-link to="/main/jokes" tag="li" class="side-nav-item">
                 <p>Jokes</p>
             </router-link> 
-            <router-link to="/news" tag="li" class="side-nav-item">
+            <router-link to="/main/news" tag="li" class="side-nav-item">
                <p>News</p>
             </router-link> 
         </ul>
@@ -59,7 +59,7 @@
             background:#6c757d;
             position:absolute;
             top:0px !important;
-            left:-16% !important;
+            /* left:-16% !important; */
             text-align: center;
         }
     }

@@ -12,5 +12,7 @@ export default {
 </script>
 
 <style scoped>
-
+.container-fluid{
+    padding-right:0;
+}
 </style>
