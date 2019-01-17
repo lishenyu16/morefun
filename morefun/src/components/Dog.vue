@@ -5,7 +5,10 @@
                 <button @click="randomDogs" class="btn btn-success">Show Random Dogs!</button>
             </div>          
         </div>
-        <div class="container-fluid">
+        <div class="container-fluid loading" v-if="loading">
+            <img src="./spinner.gif" alt="">
+        </div>
+        <div class="container-fluid" v-if="!loading">
             <div class="img-box">
                 <a :href="dogs[0]">
                     <div class="frame">
@@ -14,7 +17,7 @@
                 </a>
             </div>
         </div>
-        <div class="container-fluid">
+        <div class="container-fluid" v-if="!loading">
             <div class="img-box">
                 <a :href="dogs[1]">
                     <div class="frame">
@@ -31,9 +34,11 @@
 import axios from 'axios'
 export default {
     // https://dog.ceo/dog-api/documentation/random
-    beforeCreate(){
+    created(){
+        this.loading = true
         axios.get('https://dog.ceo/api/breeds/image/random/2')
             .then((dogs)=>{
+                this.loading = false
                 const dogsUrls = dogs.data.message
                 this.$store.dispatch('setDogs',dogsUrls)
             })
@@ -43,12 +48,15 @@ export default {
     },
     data() {
         return {
+            loading:false
         }
     },
     methods: {
         randomDogs() {
+            this.loading = true
             axios.get('https://dog.ceo/api/breeds/image/random/2')
                 .then((dogs)=>{
+                    this.loading = false
                     const dogsUrls = dogs.data.message
                     this.$store.dispatch('setDogs',dogsUrls)
                 })
@@ -130,4 +138,11 @@ img {
   top: -2.5vmin;
 }
 
+.loading img{
+    display: block;
+    margin:1rem auto;
+    max-height: 10%;
+    max-width: 10%; 
+    border:none;
+}
 </style>
