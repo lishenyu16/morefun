@@ -2,7 +2,7 @@
     <div class="container-fluid">
         <div class="container-fluid">
             <div class="random-btn">
-                <button @click="randomDogs" class="btn btn-success">Get Random Dogs!</button>
+                <button @click="randomDogs" class="btn btn-success">Show Random Dogs!</button>
             </div>          
         </div>
         <div class="container-fluid">
@@ -30,6 +30,7 @@
 <script>
 import axios from 'axios'
 export default {
+    // https://dog.ceo/dog-api/documentation/random
     beforeCreate(){
         axios.get('https://dog.ceo/api/breeds/image/random/2')
             .then((dogs)=>{
@@ -66,9 +67,7 @@ export default {
 </script>
 
 <style scoped>
-.container-fluid{
-    padding-right:0;
-}
+
 .random-btn{
     display: flex;
     justify-content: center;
@@ -91,8 +90,8 @@ img {
   border-left-color: #eed;
   border-right-color: #eed;
   border-top-color: #ccb;
-  max-height: 100%;
-  max-width: 100%;
+  max-height: 80%;
+  max-width: 80%;
 }
 
 .frame {

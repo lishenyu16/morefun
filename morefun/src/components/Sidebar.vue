@@ -14,8 +14,11 @@
             <router-link to="/main/jokes" tag="li" class="dropdown-item side-nav-item">
                 Jokes
             </router-link> 
-            <router-link to="/main/news" tag="li" class="dropdown-item side-nav-item">
-                News
+            <router-link to="/main/usnews" tag="li" class="dropdown-item side-nav-item">
+                US News
+            </router-link> 
+            <router-link to="/main/cnnews" tag="li" class="dropdown-item side-nav-item">
+                China News
             </router-link> 
         </div>
     </div>
@@ -30,8 +33,11 @@
             <router-link to="/main/jokes" tag="li" class="side-nav-item">
                 <p>Jokes</p>
             </router-link> 
-            <router-link to="/main/news" tag="li" class="side-nav-item">
-               <p>News</p>
+            <router-link to="/main/usnews" tag="li" class="side-nav-item">
+               <p>US News</p>
+            </router-link> 
+            <router-link to="/main/cnnews" tag="li" class="side-nav-item">
+               <p>China News</p>
             </router-link> 
         </ul>
         

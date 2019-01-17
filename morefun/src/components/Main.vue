@@ -23,6 +23,7 @@
 <style scoped>
 .container-fluid{
     padding-left:0;
+    padding-right:0;
 }
 .col-2{
     padding-left:0;

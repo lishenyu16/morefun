@@ -1,10 +1,10 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import HelloWorld from '@/components/HelloWorld'
 import Main from '@/components/Main'
 import Dog from '@/components/Dog'
 import Cat from '@/components/Cat'
-import News from '@/components/News'
+import USNews from '@/components/USNews'
+import CNNews from '@/components/CNNews'
 import Jokes from '@/components/Jokes'
 
 Vue.use(Router)
@@ -13,8 +13,8 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'HelloWorld',
-      component: HelloWorld
+      name: 'main',
+      component: Main
     },
     {
       path: '/main/',
@@ -34,8 +34,12 @@ export default new Router({
           component: Jokes
         },
         {
-          path: 'news',
-          component: News
+          path: 'usnews',
+          component: USNews
+        },
+        {
+          path: 'cnnews',
+          component: CNNews
         },
       ]
     }
