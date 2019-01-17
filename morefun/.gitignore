@@ -1,5 +1,4 @@
 .DS_Store
-src/api-key.js
 node_modules/
 /dist/
 npm-debug.log*
