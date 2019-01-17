@@ -90,8 +90,8 @@ img {
   border-left-color: #eed;
   border-right-color: #eed;
   border-top-color: #ccb;
-  max-height: 80%;
-  max-width: 80%;
+  max-height: 100%;
+  max-width: 100%;
 }
 
 .frame {
